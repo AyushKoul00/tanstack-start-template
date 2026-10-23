@@ -15,6 +15,7 @@ import {
   CodeBlockTitle,
 } from "@/components/ui/code-block";
 import { useHighlightedCode } from "@/hooks/use-highlighted-code";
+import { Tooltip, TooltipContent, TooltipTrigger } from "#/components/ui/tooltip";
 
 const code = `import { streamText } from "ai"
 
@@ -52,16 +53,24 @@ function CodeBlockDemo() {
             app/api/chat/route.ts
           </CodeBlockTitle>
           <CodeBlockActions>
-            <Button
-              variant="ghost"
-              size="icon-xs"
-              aria-label="Wrap lines"
-              aria-pressed={wrap}
-              className="aria-pressed:text-foreground"
-              onClick={() => setWrap(!wrap)}
-            >
-              <WrapTextIcon />
-            </Button>
+            <Tooltip>
+
+              <TooltipTrigger render={
+                <Button
+                  variant="ghost"
+                  size="icon-xs"
+                  aria-label="Wrap lines"
+                  aria-pressed={wrap}
+                  className="aria-pressed:text-foreground"
+                  onClick={() => setWrap(!wrap)}
+                >
+                  <WrapTextIcon />
+                </Button>} />
+
+              <TooltipContent>
+                <p>Wrap lines</p>
+              </TooltipContent>
+            </Tooltip>
             <Button
               variant="ghost"
               size="icon-xs"
