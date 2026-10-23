@@ -1,0 +1,32 @@
+{
+  "bundler": "vite",
+  "projectName": "skild",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "pnpm",
+  "includeExamples": false,
+  "tailwind": true,
+  "projectPreset": "default",
+  "routerOnly": false,
+  "addOnOptions": {
+    "drizzle": {
+      "database": "postgresql"
+    }
+  },
+  "git": true,
+  "install": false,
+  "intent": true,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "nitro",
+    "drizzle",
+    "compiler",
+    "shadcn",
+    "table",
+    "better-auth",
+    "tanstack-query",
+    "ai",
+    "store"
+  ]
+}

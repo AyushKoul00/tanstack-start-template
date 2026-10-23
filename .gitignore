@@ -1,0 +1,25 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+todos.json
+
+# dotenv environment variable files
+.env.*
+!.env.example
+
+# Local agent and skill directories
+.agent/
+.agents/
+.skills/
+.claude/skills/
+.cursor/skills/
+.codex/skills/
