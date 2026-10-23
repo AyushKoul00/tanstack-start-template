@@ -73,15 +73,29 @@ function CodeBlockDemo() {
                 <p>Wrap lines</p>
               </TooltipContent>
             </Tooltip>
-            <Button
-              variant="ghost"
-              size="icon-xs"
-              aria-label="Download"
-              onClick={() => download(code, "route.ts")}
-            >
-              <DownloadIcon />
-            </Button>
-            <CodeBlockCopyButton value={code} />
+            <Tooltip>
+              <TooltipTrigger
+                render={
+                  <Button
+                    variant="ghost"
+                    size="icon-xs"
+                    aria-label="Download"
+                    onClick={() => download(code, "route.ts")}
+                  >
+                    <DownloadIcon />
+                  </Button>
+                }
+              />
+              <TooltipContent>
+                <p>Download</p>
+              </TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger render={<CodeBlockCopyButton value={code} />} />
+              <TooltipContent>
+                <p>Copy</p>
+              </TooltipContent>
+            </Tooltip>
           </CodeBlockActions>
         </CodeBlockHeader>
         <CodeBlockContent wrap={wrap} lineNumbers>
