@@ -24,7 +24,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "Skild | Home",
+        title: "Tanstack Start Template",
       },
     ],
     links: [
